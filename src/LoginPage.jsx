@@ -28,48 +28,56 @@ const LoginPage = () => {
 
         {/* Form */}
         <form className="flex flex-col space-y-4 items-center"> {/* Added text-center class */}
-        
-  {/* Email Input */}
-<div className="input-wrapper">
-  <span className="input-icon">
-    <FontAwesomeIcon icon={faEnvelope} />
-  </span>
+ {/* Email Input */}
+<div className="input-wrapper items-center" style={{ 
+  width: 'calc(100% - 80px)', 
+  height: '40px', 
+  borderRadius: '8px', 
+  padding: '10px', 
+  position: 'relative', 
+}}>
+  <FontAwesomeIcon icon={faEnvelope} className='text-white absolute top-1/2 left-6 ' /> {/* Position the icon absolutely */}
   <input 
     type="email" 
     placeholder="Email Address" 
-    className="input-field" 
+    className="input-field bg-transparent pl-10" // Add padding to accommodate the icon
     style={{ 
-      width: 'calc(100% - 40px)', // Adjust width to accommodate the icon
+      width: 'calc(100% - 40px)', 
       height: '40px', 
       borderRadius: '8px', 
-      padding: '10px', 
-      border: '1px solid #ccc' 
+      border: '1px solid #ccc',
+      paddingLeft: '40px', // Adjust padding to accommodate the icon
     }} 
   />
 </div>
 
 {/* Password Input */}
-<div className="input-wrapper">
-  <span className="input-icon">
-    <FontAwesomeIcon icon={faLock} />
-  </span>
+<div className="input-wrapper" style={{ 
+  width: 'calc(100% - 80px)', 
+  height: '40px', 
+  borderRadius: '8px', 
+  padding: '10px', 
+  position: 'relative', // Ensure the container is positioned relatively
+}}>
+  <FontAwesomeIcon icon={faLock} className='text-white absolute text-white absolute top-1/2 left-6 ' /> {/* Position the icon absolutely */}
   <input 
     type="password" 
     placeholder="Password" 
-    className="input-field" 
+    className="input-field bg-transparent pl-10" // Add padding to accommodate the icon
     style={{ 
-      width: 'calc(100% - 40px)', // Adjust width to accommodate the icon
+      width: 'calc(100% - 40px)', 
       height: '40px', 
       borderRadius: '8px', 
-      padding: '10px', 
-      border: '1px solid #ccc' 
+      border: '1px solid #ccc',
+      paddingLeft: '40px', // Adjust padding to accommodate the icon
     }} 
   />
 </div>
 
 
+
          {/* Remember Me and Forgot Password */}
-         <div className="flex gap-[300px] ml-32 items-center w-full"> 
+         <div className="flex gap-[280px] ml-32 items-center w-full"> 
             <div className="flex items-center">
               <input type="checkbox" id="rememberMe" className="mr-2" />
               <label htmlFor="rememberMe" className="text-gray-500">Remember me</label>
@@ -84,9 +92,9 @@ const LoginPage = () => {
           {/* Login Button */}
           <button 
             type="submit" 
-            className="btn-login bg-[#B6F09C]  text-black px-4 py-2 rounded-md"
+            className="btn-login bg-[#B6F09C] -ml-14 text-black px-4 py-2 rounded-md"
             style={{ 
-                width: 'calc(100% - 120px)', 
+                width: 'calc(100% - 140px)', 
                
               }} 
           >
