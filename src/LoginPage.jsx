@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+
 
 const LoginPage = () => {
   return  (
@@ -25,33 +28,45 @@ const LoginPage = () => {
 
         {/* Form */}
         <form className="flex flex-col space-y-4 items-center"> {/* Added text-center class */}
-          {/* Email Input */}
-          <input 
-            type="email" 
-            placeholder="afnnafsal@gmail.com" 
-            className="input-field" 
-            style={{ 
-              width: 'calc(100% - 120px)', // Reduce width
-              height: '40px', 
-              borderRadius: '8px', 
-              padding: '10px', 
-              border: '1px solid #ccc' 
-            }} 
-          />
+        
+  {/* Email Input */}
+<div className="input-wrapper">
+  <span className="input-icon">
+    <FontAwesomeIcon icon={faEnvelope} />
+  </span>
+  <input 
+    type="email" 
+    placeholder="Email Address" 
+    className="input-field" 
+    style={{ 
+      width: 'calc(100% - 40px)', // Adjust width to accommodate the icon
+      height: '40px', 
+      borderRadius: '8px', 
+      padding: '10px', 
+      border: '1px solid #ccc' 
+    }} 
+  />
+</div>
 
-          {/* Password Input */}
-          <input 
-            type="password" 
-            placeholder="••••••••••" 
-            className="input-field" 
-            style={{ 
-              width: 'calc(100% - 120px)', // Reduce width
-              height: '40px', 
-              borderRadius: '8px', 
-              padding: '10px', 
-              border: '1px solid #ccc' 
-            }} 
-          />
+{/* Password Input */}
+<div className="input-wrapper">
+  <span className="input-icon">
+    <FontAwesomeIcon icon={faLock} />
+  </span>
+  <input 
+    type="password" 
+    placeholder="Password" 
+    className="input-field" 
+    style={{ 
+      width: 'calc(100% - 40px)', // Adjust width to accommodate the icon
+      height: '40px', 
+      borderRadius: '8px', 
+      padding: '10px', 
+      border: '1px solid #ccc' 
+    }} 
+  />
+</div>
+
 
          {/* Remember Me and Forgot Password */}
          <div className="flex gap-[300px] ml-32 items-center w-full"> 
