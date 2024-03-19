@@ -9,7 +9,7 @@ const LoginPage = () => {
       {/* Right Section */}
       <div className="flex-1 flex flex-col justify-center px-10 relative">
         {/* Logo */}
-        <div className="absolute top-0 left-0 mt-4 ml-4">
+        <div className="absolute top-4 left-0 mt-4 ml-8">
           <img src="/logo.png" alt="Logo" className="w-12 h-12" />
         </div>
 
