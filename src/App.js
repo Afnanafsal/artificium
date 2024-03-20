@@ -1,15 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './home'; 
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        {/* LoginPage will be the primary page */}
         <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/home" element={<Home />} /> 
       </Routes>
     </Router>
   );

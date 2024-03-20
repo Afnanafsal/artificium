@@ -1,9 +1,17 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
-
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+
+    navigate('/home');
+  };
+
+
   return  (
     <div className="h-screen bg-[#131619] flex relative" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
       {/* Right Section */}
@@ -97,6 +105,7 @@ const LoginPage = () => {
                 width: 'calc(100% - 140px)', 
                
               }} 
+              onClick={handleLogin}
           >
             Log In
           </button>
